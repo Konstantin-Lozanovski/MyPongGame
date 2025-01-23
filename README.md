@@ -1,4 +1,4 @@
-# Retro Pong Game 🎮
+# Retro Pong GameComponents.Game 🎮
 
 ![Pong Screenshot](https://via.placeholder.com/768x576?text=Screenshot)  
 *A classic Pong game built in Java.*
@@ -32,20 +32,20 @@ Whether you're a fan of retro games or learning Java programming, this project s
 - **Dynamic collisions**: Realistic ball deflections based on collision angles.
 - **Sound effects**: Custom hit and goal scoring sounds.
 - **End Screen**: Displays the winner after the game ends.
-- **Main Menu and Settings Panel**: Navigate easily between game states.
+- **Main.Main Menu and Settings Panel**: Navigate easily between game states.
 
 ---
 
 ## How to Play
 
 ### Controls:
-| Player         | Action         | Key       |
+| GameComponents.Player         | Action         | Key       |
 |----------------|----------------|-----------|
-| **Player 1**   | Move Up        | `W`       |
+| **GameComponents.Player 1**   | Move Up        | `W`       |
 |                | Move Down      | `S`       |
-| **Player 2**   | Move Up        | `↑` Arrow |
+| **GameComponents.Player 2**   | Move Up        | `↑` Arrow |
 |                | Move Down      | `↓` Arrow |
-| **Global**     | Start Game     | `Space`   |
+| **Global**     | Start GameComponents.Game     | `Space`   |
 
 ### Objective:
 - Score 5 points to win the game.

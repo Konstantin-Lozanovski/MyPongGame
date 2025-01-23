@@ -1,3 +1,7 @@
+package GameComponents;
+
+import Panels.GamePanel;
+
 import javax.sound.sampled.*;
 import java.awt.*;
 import java.io.File;
@@ -27,18 +31,15 @@ public class Ball {
         hitSoundClip = getClip("Sounds/ball_hit.wav");
         goalScoreSoundClip = getClip("Sounds/goal_scored.wav");
 
-
         setDefaultValues();
     }
 
     public void update(Paddle paddle1, Paddle paddle2) {
+        screenY += (int) (Math.sin(angle) * speed);
+        screenX += (int) (Math.cos(angle) * speed);
 
-            screenY += (int) (Math.sin(angle) * speed);
-            screenX += (int) (Math.cos(angle) * speed);
-
-            checkWallCollision();
-            checkPaddleCollision(paddle1, paddle2);
-
+        checkWallCollision();
+        checkPaddleCollision(paddle1, paddle2);
     }
 
     public void draw(Graphics g) {

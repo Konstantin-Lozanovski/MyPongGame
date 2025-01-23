@@ -1,14 +1,18 @@
+package Panels;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Main.MainWindow;
+import UI.Button;
 
 public class SettingsPanel extends JPanel implements ActionListener {
 
     MainWindow mainWindow;
     JButton backButton;
 
-    SettingsPanel(MainWindow mainWindow){
+    public SettingsPanel(MainWindow mainWindow){
         this.mainWindow = mainWindow;
         this.setPreferredSize(new Dimension(mainWindow.screenWidth, mainWindow.screenHeight));
         this.setBackground(Color.BLACK);

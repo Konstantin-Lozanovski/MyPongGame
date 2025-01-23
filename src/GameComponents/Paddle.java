@@ -1,3 +1,7 @@
+package GameComponents;
+
+import Panels.GamePanel;
+
 import java.awt.*;
 
 public class Paddle {
@@ -6,7 +10,6 @@ public class Paddle {
     int screenY;
     public final int paddleWidth = 15;
     public final int paddleHeight = 80;
-
     int speed = 10;
 
     GamePanel gp;

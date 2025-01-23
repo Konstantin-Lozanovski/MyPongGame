@@ -1,10 +1,12 @@
+package UI;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Button extends JButton {
 
 
-    Button(String text) {
+    public Button(String text) {
         this.setText(text);
         this.setBackground(Color.blue);
         this.setForeground(Color.red);

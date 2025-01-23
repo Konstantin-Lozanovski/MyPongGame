@@ -1,3 +1,11 @@
+package Main;
+
+import Panels.EndScreenPanel;
+import Panels.GamePanel;
+import Panels.MainMenuPanel;
+import Panels.SettingsPanel;
+import GameComponents.Game;
+
 import javax.swing.*;
 
 public class MainWindow extends JFrame   {

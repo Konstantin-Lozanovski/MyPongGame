@@ -1,6 +1,11 @@
+package Panels;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import Main.MainWindow;
+import GameComponents.KeyHandler;
+import GameComponents.Game;
 
 public class GamePanel extends JPanel implements Runnable{
 
@@ -17,14 +22,14 @@ public class GamePanel extends JPanel implements Runnable{
     public Game game;
 
 
-    GamePanel(MainWindow mainWindow) {
+    public GamePanel(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.addKeyListener(keyH);
         this.setFocusable(true);
 
-        game = new Game(this, keyH,mainWindow);
+        game = new Game(this, keyH, mainWindow);
     }
 
     public void startGameThread() {

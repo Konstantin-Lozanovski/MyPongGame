@@ -1,3 +1,8 @@
+package GameComponents;
+
+import Panels.GamePanel;
+import Main.MainWindow;
+
 import java.awt.*;
 
 public class Game {
@@ -12,25 +17,25 @@ public class Game {
     MainWindow mainWindow;
     GamePanel gp;
     KeyHandler keyH;
+
     public Player player1;
     public Player player2;
     public Ball ball;
-    PlayerType winner = null;
+    public PlayerType winner = null;
 
     public boolean ballInPlay = false;
     public PlayerType playerScoredOn = PlayerType.PLAYER_1;//if = 1 player 2 scored if = 2 player 1 scored
 
-    Game(GamePanel gp, KeyHandler keyH, MainWindow mainWindow) {
+    public Game(GamePanel gp,KeyHandler keyH, MainWindow mainWindow) {
         this.mainWindow = mainWindow;
-        this.gp = gp;
         this.keyH = keyH;
+        this.gp = gp;
         player1 = new Player(gp, keyH, true);
         player2 = new Player(gp, keyH, false);
         ball = new Ball(gp, keyH);
     }
 
     public void update() {
-
         if (keyH.spacePressed && !ballInPlay) {
             ballInPlay = true;
         }
@@ -73,9 +78,9 @@ public class Game {
     private void drawScore(Graphics g){
         g.setFont(new Font("Verdana", Font.BOLD, 50));
         g.setColor(Color.red);
-        g.drawString(String.valueOf(player1.getScore()), gp.screenWidth / 4, 50); // Player 1 score on the left
+        g.drawString(String.valueOf(player1.getScore()), gp.screenWidth / 4, 50); // GameComponents.Player 1 score on the left
         g.setColor(Color.blue);
-        g.drawString(String.valueOf(player2.getScore()), gp.screenWidth * 3 / 4, 50); // Player 2 score on the right
+        g.drawString(String.valueOf(player2.getScore()), gp.screenWidth * 3 / 4, 50); // GameComponents.Player 2 score on the right
     }
 
     public void updateScore(Player player) {
@@ -121,6 +126,5 @@ public class Game {
         player2.paddle.resetPaddle();
         ballInPlay = false;
     }
-
 
 }

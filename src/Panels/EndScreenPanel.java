@@ -1,7 +1,13 @@
+package Panels;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import Main.MainWindow;
+import GameComponents.Game;
+
 
 public class EndScreenPanel extends JPanel implements ActionListener {
 
@@ -11,16 +17,14 @@ public class EndScreenPanel extends JPanel implements ActionListener {
 
     public EndScreenPanel(MainWindow mainWindow, Game.PlayerType winner) {
         this.mainWindow = mainWindow;
+        this.winner = winner;
+
         this.setPreferredSize(new Dimension(mainWindow.screenWidth, mainWindow.screenHeight));
         this.setLayout(null);
         this.setBackground(Color.BLACK);
         this.setFocusable(true);
 
-
-        this.winner = winner;
-
-
-        mainMenuButton = new Button("Main Menu");
+        mainMenuButton = new Button("Main.Main Menu");
         mainMenuButton.setBounds(mainWindow.screenWidth / 2 - 100, mainWindow.screenHeight / 2 - 25 + 100, 200, 50);
         mainMenuButton.addActionListener(this);
 
@@ -33,6 +37,7 @@ public class EndScreenPanel extends JPanel implements ActionListener {
             mainWindow.startMainMenuPanel();
         }
     }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

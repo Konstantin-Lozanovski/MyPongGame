@@ -1,8 +1,11 @@
+package GameComponents;
+
+import Panels.GamePanel;
+
 import java.awt.*;
 
 public class Player {
     public int score;
-    public String name;
     public Paddle paddle;
 
     public Player(GamePanel gp, KeyHandler keyH, boolean isLeftPlayer){
@@ -16,10 +19,6 @@ public class Player {
 
     public void draw(Graphics g) {
         paddle.draw(g);
-    }
-
-    public void setDefaultValues() {
-        score = 0;
     }
 
     public int getScore() {

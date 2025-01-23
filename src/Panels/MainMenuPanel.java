@@ -1,7 +1,11 @@
+package Panels;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Main.MainWindow;
+import UI.Button;
 
 public class MainMenuPanel extends JPanel implements ActionListener {
 
@@ -9,7 +13,7 @@ public class MainMenuPanel extends JPanel implements ActionListener {
     private final JButton playButton;
     private final JButton settingsButton;
 
-    MainMenuPanel(MainWindow mainWindow) {
+    public MainMenuPanel(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
         this.setPreferredSize(new Dimension(mainWindow.screenWidth, mainWindow.screenHeight));
         this.setLayout(null);
@@ -28,7 +32,6 @@ public class MainMenuPanel extends JPanel implements ActionListener {
         this.add(settingsButton);
 
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
