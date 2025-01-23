@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import Main.MainWindow;
 import GameComponents.Game;
+import UI.Button;
 
 
 public class EndScreenPanel extends JPanel implements ActionListener {
@@ -24,7 +25,7 @@ public class EndScreenPanel extends JPanel implements ActionListener {
         this.setBackground(Color.BLACK);
         this.setFocusable(true);
 
-        mainMenuButton = new Button("Main.Main Menu");
+        mainMenuButton = new Button("Main Menu");
         mainMenuButton.setBounds(mainWindow.screenWidth / 2 - 100, mainWindow.screenHeight / 2 - 25 + 100, 200, 50);
         mainMenuButton.addActionListener(this);
 
