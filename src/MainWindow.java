@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class MainWindow extends JFrame implements Runnable {
+public class MainWindow extends JFrame   {
 
     public final int screenWidth = 768;
     public final int screenHeight = 576;
@@ -66,8 +66,5 @@ public class MainWindow extends JFrame implements Runnable {
         settingsPanel.requestFocusInWindow();
     }
 
-    @Override
-    public void run() {
 
-    }
 }
