@@ -52,8 +52,8 @@ public class Game {
         drawMap(g);
         player1.draw(g);
         player2.draw(g);
-        ball.draw(g);
         drawScore(g);
+        ball.draw(g);
     }
 
     private void drawMap(Graphics g){
